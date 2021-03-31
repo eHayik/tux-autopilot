@@ -8,6 +8,7 @@ source ~/.bashrc
 
 jenv enable-plugin "export"
 jenv enable-plugin maven
+jenv enable-plugin gradle
 exec $SHELL -l
 
 jenv doctor

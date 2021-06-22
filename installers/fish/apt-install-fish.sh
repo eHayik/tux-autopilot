@@ -20,6 +20,8 @@ if ! type "fish" > /dev/null; then
     #Install Fisher
     curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
     fisher --version
+
+    cp installers/fish/config.fish ~/.config/fish/
  
 else
     fish 

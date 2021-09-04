@@ -39,9 +39,16 @@ sudo add-apt-repository \
  # Verify that Docker Engine is installed correctly by running the hello-world image.
  sudo docker run hello-world
 
+
+
+
  # 4. Install Docker Compose
  sudo curl -L "https://github.com/docker/compose/releases/download/1.28.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
  
  sudo chmod +x /usr/local/bin/docker-compose
 
  docker-compose --version
+
+
+# Run Docker as non root user without sudo command
+# https://www.configserverfirewall.com/docker/run-docker-without-sudo/

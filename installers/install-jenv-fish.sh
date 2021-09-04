@@ -12,6 +12,7 @@ cp ~/.jenv/fish/export.fish ~/.config/fish/function/export.fish
 
 jenv enable-plugin "export"
 jenv enable-plugin maven
+jenv enable-plugin gradle
 exec $SHELL -l
 
 jenv doctor

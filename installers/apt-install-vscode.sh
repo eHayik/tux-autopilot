@@ -13,3 +13,5 @@ sudo apt install code -y
 # Port of IntelliJ IDEA key bindings for VS Code. Includes keymaps for popular JetBrains products 
 #such as IntelliJ Ultimate, WebStorm, PyCharm, PHP Storm
 code --install-extension k--kato.intellij-idea-keybindings
+# Dracula Theme for Visual Studio Code
+code --install-extension dracula-theme.theme-dracula

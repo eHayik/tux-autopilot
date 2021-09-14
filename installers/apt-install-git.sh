@@ -7,7 +7,7 @@ sudo apt-get install software-properties-common python-software-properties
 '
 
 if ! type "git" > /dev/null; then
-    sudo add-apt-repository ppa:git-core/ppa
+    sudo add-apt-repository ppa:git-core/ppa -y
     sudo apt-get update
     sudo apt-get install git -y
 

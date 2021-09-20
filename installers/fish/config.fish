@@ -2,12 +2,16 @@ set -U fish_greeting '><(((">'
 
 # Tools
 abbr -a nf 'nano ~/.config/fish/config.fish'
-abbr -a cf 'code ~/.config/fish/config.fish'
+abbr -a mf 'micro ~/.config/fish/config.fish'
+abbr -a cf 'code ~/.config/fish/config.fish' 
 abbr -a ll 'ls -laht'
 alias nuke='sudo rm -rvf $argv'
 alias gzd='gzip -dk $argv'
-alias td='tar -cvf $argv'
 alias fkc='flatpak uninstall --unused'
+alias please='sudo'
+alias pl='sudo'
+alias reload='source /home/ehayik/.config/fish/config.fish'
+abbr -a  aptu 'sudo apt update'
 
 function cl --wraps=clear --description 'alias cl clear'
   clear $argv;
@@ -24,6 +28,7 @@ function mkcd -d "Create a directory and set CWD"
                 return
         end
     end
+ end   
 
 # Gradle
 function guw -d "update gradle wrapper to the given version"

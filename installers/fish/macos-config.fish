@@ -1,12 +1,22 @@
 ### ADDING TO THE PATH
+
 # First line removes the path; second line sets it. Without the first line,
 # your path gets massive and fish becomes very slow.
 set -e fish_user_paths
 set -U fish_user_paths $HOME/.local/bin $HOME/Applications $fish_user_paths
 
+# Add HomeBrew's bin directory to path so you can use HomeBrew's binaries like `starship`
+## Fish uses `fish_add_path` instead of `export PATH` modify $PATH.
+fish_add_path "/opt/homebrew/bin/"
+
+### END OF ADDING TO THE PATH ### 
+
 ### EXPORT ###
 
-fish_add_path "/opt/homebrew/bin/"
+## Maven
+#set -x MAVEN_OPTS "-Djava.net.preferIPv4Stack=true -XX:-TieredCompilation -XX:TieredStopAtLevel=1"
+
+### END OF EXPORT ### 
 
 #### FUNCTIONS ####
 function fish_greeting
@@ -59,6 +69,10 @@ abbr -a mf 'micro ~/.config/fish/config.fish'
 abbr -a cf 'code ~/.config/fish/config.fish' 
 alias reload='source ~/.config/fish/config.fish'
 
+# zsh config edtiors
+abbr -a mz 'micro ~/.zshrc'
+abbr -a cz 'code ~/.zshrc'
+
 # confirm before overwriting something
 alias cp="cp -i"
 alias mv='mv -i'
@@ -82,7 +96,7 @@ alias newtag='git tag -a'
 
 ## files
 abbr -a ll 'ls -laht'
-alias nuke='sudo rm -rvfi $argv'
+alias nuke='sudo rm -rvf $argv'
 
 ## packages
 
@@ -92,6 +106,7 @@ abbr -a  upgrade 'brew upgrade'
 abbr -a tap 'brew tap'
 abbr -a untap 'brew untap'
 abbr -a cask-install 'brew install --cask'
+abbr -a cask-uninstall 'brew uninstall --cask'
 abbr -a cask-upgrade 'brew cask upgrade'
 
 ## Enable Startship prompt

@@ -113,5 +113,4 @@ abbr -a cask-upgrade 'brew cask upgrade'
 # starship init fish | source
 
 ## Enable Jenv
-#set PATH $HOME/.jenv/bin $PATH
 #status --is-interactive; and source (jenv init --no-rehash -|psub)

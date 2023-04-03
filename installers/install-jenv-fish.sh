@@ -1,6 +1,6 @@
 
 #!/bin/bash
-# source https://velog.io/@spearkkk/Usage-jEnv-in-Fish
+# source: https://velog.io/@spearkkk/Usage-jEnv-in-Fish
 
 git clone https://github.com/jenv/jenv.git ~/.jenv
 
